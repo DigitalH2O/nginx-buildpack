@@ -9,9 +9,13 @@ events {
 }
 
 http {
-        gzip on;
-        gzip_comp_level 2;
-        gzip_min_length 512;
+    gzip on;
+    gzip_comp_level 2;
+    gzip_disable "MSIE [1-6]\.";
+    gzip_types text/plain text/html text/xml text/css
+           text/comma-separated-values
+           text/javascript application/x-javascript
+           application/atom+xml application/json;
 
 	server_tokens off;
 
